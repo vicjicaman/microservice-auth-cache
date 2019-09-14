@@ -1,16 +1,16 @@
 apiVersion: apps/v1beta2
 kind: StatefulSet
 metadata:
-  name: auth-cache-set
-  namespace: microservices-namespace
+  name: 'auth-cache-set'
+  namespace: 'microservices-namespace'
   labels:
     moduleid: microservice-auth-data
     version: 1.70.0-auth-base-cache-data-prod
 spec:
-  serviceName: auth-cache-service
+  serviceName: 'auth-cache-service'
   selector:
     matchLabels:
-      app: auth-cache-set
+      app: 'auth-cache-set'
   replicas: 1
   template:
     metadata:
