@@ -28,7 +28,7 @@ spec:
             - '--requirepass'
             - SECRET_PASSWORD_CACHE
             - '--appendonly'
-            - yes
+            - 'yes'
             - '--save'
             - '900'
             - '1'
