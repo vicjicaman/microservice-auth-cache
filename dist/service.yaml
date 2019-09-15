@@ -1,16 +1,1 @@
-apiVersion: v1
-kind: Service
-metadata:
-  name: auth-cache-service
-  namespace: microservices-namespace
-  labels:
-    moduleid: microservice-auth-data
-    version: 1.70.2-auth-base-cache-data-prod
-spec:
-  clusterIP: None
-  ports:
-    -
-      port: 6379
-      targetPort: 6379
-  selector:
-    app: auth-cache-set
+"apiVersion: v1\nkind: Service\nmetadata:\n  name: auth-cache-service\n  namespace: microservices-namespace\n  labels:\n    moduleid: microservice-auth-data\n    version: 1.70.3-auth-base-cache-data-prod\nspec:\n  clusterIP: None\n  ports:\n    -\n      port: 6379\n      targetPort: 6379\n  selector:\n    app: auth-cache-set\n"
