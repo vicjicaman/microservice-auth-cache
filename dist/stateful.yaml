@@ -1,23 +1,23 @@
 apiVersion: apps/v1beta2
 kind: StatefulSet
 metadata:
-  name: 'auth-cache-set'
-  namespace: 'microservices-namespace'
+  name: auth-cache-set
+  namespace: microservices-namespace
   labels:
     moduleid: microservice-auth-data
-    version: 1.70.0-master
+    version: 1.70.1-master
 spec:
-  serviceName: 'auth-cache-service'
+  serviceName: auth-cache-service
   selector:
     matchLabels:
-      app: 'auth-cache-set'
+      app: auth-cache-set
   replicas: 1
   template:
     metadata:
       labels:
         moduleid: microservice-auth-data
-        version: 1.70.0-master
-        app: 'auth-cache-set'
+        version: 1.70.1-master
+        app: auth-cache-set
     spec:
       terminationGracePeriodSeconds: 10
       containers:
@@ -28,7 +28,7 @@ spec:
             - '--requirepass'
             - SECRET_PASSWORD_CACHE
             - '--appendonly'
-            - yes
+            - 'yes'
             - '--save'
             - '900'
             - '1'
@@ -37,7 +37,7 @@ spec:
             - '1'
           ports:
             -
-              containerPort: '6379'
+              containerPort: 6379
           volumeMounts:
             -
               name: microservice-auth-cache-storage
