@@ -6,7 +6,7 @@
     },
     "microservice-auth-cache-config": {
       "url": "github.com:vicjicaman/microservice-auth-cache-config.git",
-      "version": "1.70.1-auth-config-info"
+      "version": "file:./../microservice-auth-cache-config"
     }
   }
 }
