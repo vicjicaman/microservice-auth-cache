@@ -4,8 +4,8 @@ metadata:
   name: auth-cache-service
   namespace: microservices-namespace
   labels:
-    moduleid: microservice-auth-data
-    version: 1.70.1-master
+    moduleid: microservice-auth-cache
+    version: 1.70.2-master
 spec:
   clusterIP: None
   ports:
