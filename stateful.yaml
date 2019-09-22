@@ -5,7 +5,7 @@ metadata:
   namespace: '${NAMESPACE@microservice-config}'
   labels:
     moduleid: microservice-auth-cache
-    version: 1.70.4-auth-config-prod
+    version: 1.70.2-master
 spec:
   serviceName: '${SERVICE@microservice-auth-cache-config}'
   selector:
@@ -16,7 +16,7 @@ spec:
     metadata:
       labels:
         moduleid: microservice-auth-cache
-        version: 1.70.4-auth-config-prod
+        version: 1.70.2-master
         app: '${STATEFUL@microservice-auth-cache-config}'
     spec:
       terminationGracePeriodSeconds: 10
