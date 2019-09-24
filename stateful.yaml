@@ -1,11 +1,11 @@
-apiVersion: apps/v1beta2
+apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: '${STATEFUL@microservice-auth-cache-config}'
   namespace: '${NAMESPACE@microservice-config}'
   labels:
     moduleid: microservice-auth-cache
-    version: 1.70.2-master
+    version: 1.70.3-master
 spec:
   serviceName: '${SERVICE@microservice-auth-cache-config}'
   selector:
@@ -16,7 +16,7 @@ spec:
     metadata:
       labels:
         moduleid: microservice-auth-cache
-        version: 1.70.2-master
+        version: 1.70.3-master
         app: '${STATEFUL@microservice-auth-cache-config}'
     spec:
       terminationGracePeriodSeconds: 10
